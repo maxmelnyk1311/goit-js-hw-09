@@ -22,7 +22,10 @@ let formItems = {
 const parsedFormContent = localStorage.getItem(STORAGE_KEY ?? "");
 if (parsedFormContent) {
     formItems = JSON.parse(parsedFormContent);
+    form.elements.email.value = formItems.email;
+    form.elements.message.value = formItems.message;
 }
+
 
 form.addEventListener("input", () => {
     formItems.email = form.elements.email.value.trim();
@@ -42,3 +45,4 @@ form.addEventListener('submit', (event) => {
     form.reset();
     console.log(formItems);
 });
+
