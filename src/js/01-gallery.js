@@ -67,9 +67,9 @@ const images = [
     },
 ];
 
-const gallery = document.querySelector(".gallery");
+const imagesGallery = document.querySelector(".gallery");
 
-gallery.innerHTML = images.reduce((html, {original, preview, description}) => html + 
+imagesGallery.innerHTML = images.reduce((html, {original, preview, description}) => html + 
     `<li class="gallery-item">
         <a class="gallery-link" href="${original}">
             <img
@@ -81,4 +81,8 @@ gallery.innerHTML = images.reduce((html, {original, preview, description}) => ht
         </a>
     </li>`, "");
 
-var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+let ligthBoxModal = new SimpleLightbox('.gallery a', {
+  captionDelay: 250, 
+  captionsData: 'alt'
+});
+ligthBoxModal.on('show.simplelightbox', function () {});

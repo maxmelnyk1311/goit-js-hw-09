@@ -21,7 +21,16 @@
     outline: #4E75FF solid;
 }
 
-.modal-image {
-    width: 1440px;
-    height: 700px;
+.container {
+    width: 1158px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.container a {
+    font-size: 20px;
+    text-decoration: none;
 }
