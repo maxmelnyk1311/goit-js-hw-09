@@ -81,6 +81,7 @@ imagesGallery.innerHTML = images.reduce((html, {original, preview, description})
         </a>
     </li>`, "");
 
+    
 let ligthBoxModal = new SimpleLightbox('.gallery a', {
   captionDelay: 250, 
   captionsData: 'alt'
