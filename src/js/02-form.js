@@ -26,7 +26,6 @@ if (parsedFormContent) {
     form.elements.message.value = formItems.message;
 }
 
-
 form.addEventListener("input", () => {
     formItems.email = form.elements.email.value.trim();
     formItems.message = form.elements.message.value.trim();
